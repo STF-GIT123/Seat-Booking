@@ -1,0 +1,15 @@
+<!-- src/app/seat-reservation/seat-reservation.component.html -->
+<div class="coach">
+  <div class="row" *ngFor="let row of seats | slice:0:totalSeats; let rowIndex = index">
+    <button 
+      *ngFor="let seat of seats.slice(rowIndex * rowLength, (rowIndex + 1) * rowLength)" 
+      [ngClass]="{ 'booked': seat.isBooked, 'available': !seat.isBooked }">
+      {{ seat.seatNumber }}
+    </button>
+  </div>
+</div>
+
+<input type="number" [(ngModel)]="requestedSeats" placeholder="Enter number of seats" min="1" max="7" />
+<button (click)="bookSeats(requestedSeats)">Book Seats</button>
+
+<p>{{ bookingMessage }}</p>

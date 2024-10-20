@@ -1,0 +1,29 @@
+/* src/app/seat-reservation/seat-reservation.component.css */
+.coach {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.row {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 10px;
+}
+
+button {
+  width: 40px;
+  height: 40px;
+  margin: 5px;
+  font-size: 14px;
+}
+
+.booked {
+  background-color: red;
+  color: white;
+}
+
+.available {
+  background-color: green;
+  color: white;
+}
